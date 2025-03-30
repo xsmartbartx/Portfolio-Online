@@ -94,7 +94,7 @@ const Hero = () => {
               className="w-12 h-12 flex items-center justify-center rounded-full border border-white-100 border-opacity-20 text-white-100 hover:text-accent hover:border-accent transition-all duration-300"
               aria-label="GitHub"
             >
-              <FaGithub size={22} />
+              <FaGithub size={22} className="inline" />
             </a>
             <a 
               href="https://linkedin.com/in/yourusername" 
@@ -103,7 +103,7 @@ const Hero = () => {
               className="w-12 h-12 flex items-center justify-center rounded-full border border-white-100 border-opacity-20 text-white-100 hover:text-accent hover:border-accent transition-all duration-300"
               aria-label="LinkedIn"
             >
-              <FaLinkedin size={22} />
+              <FaLinkedin size={22} className="inline" />
             </a>
           </motion.div>
           
@@ -165,7 +165,7 @@ const Hero = () => {
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
       >
         <span className="text-secondary text-sm mb-2">Scroll Down</span>
-        <FaArrowDown className="text-accent animate-bounce" />
+        <FaArrowDown className="text-accent animate-bounce inline" />
       </motion.div>
     </section>
   );
