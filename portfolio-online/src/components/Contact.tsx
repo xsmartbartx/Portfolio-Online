@@ -230,7 +230,7 @@ const Contact = () => {
                 ) : (
                   <>
                     <span>Send Message</span>
-                    <FaPaperPlane size={14} />
+                    <FaPaperPlane size={14} className="inline" />
                   </>
                 )}
               </motion.button>
