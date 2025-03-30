@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaArrowRight } from 'react-icons/fa';
+import { IconType } from 'react-icons';
 
 interface Project {
   id: number;
@@ -251,7 +252,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="text-secondary hover:text-accent transition-colors flex items-center gap-1 text-sm"
                     >
-                      View details <FaArrowRight size={12} />
+                      View details <FaArrowRight size={12} className="inline" />
                     </a>
                   </div>
                 </div>
@@ -268,7 +269,7 @@ const Projects = () => {
             className="btn-secondary flex items-center gap-2"
           >
             <span>View All Projects</span>
-            <FaGithub size={18} />
+            <FaGithub size={18} className="inline" />
           </a>
         </div>
       </div>
