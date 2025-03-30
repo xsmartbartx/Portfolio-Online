@@ -97,9 +97,9 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <FaTimes size={24} className="text-white-100" />
+              <FaTimes size={24} className="text-white-100 inline" />
             ) : (
-              <FaBars size={24} className={`${scrolled ? 'text-white-100' : 'text-accent'}`} />
+              <FaBars size={24} className={`${scrolled ? 'text-white-100' : 'text-accent'} inline`} />
             )}
           </button>
         </div>
@@ -121,7 +121,7 @@ const Navbar = () => {
                     className="text-white-100 hover:text-accent"
                     aria-label="Close menu"
                   >
-                    <FaTimes size={24} />
+                    <FaTimes size={24} className="inline" />
                   </button>
                 </div>
                 <ul className="flex flex-col gap-8">
