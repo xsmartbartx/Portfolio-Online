@@ -5,10 +5,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: <FaGithub />, url: "https://github.com/yourusername", label: "GitHub" },
-    { icon: <FaLinkedin />, url: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-    { icon: <FaTwitter />, url: "https://twitter.com/yourusername", label: "Twitter" },
-    { icon: <FaDribbble />, url: "https://dribbble.com/yourusername", label: "Dribbble" }
+    { icon: <FaGithub className="inline" />, url: "https://github.com/yourusername", label: "GitHub" },
+    { icon: <FaLinkedin className="inline" />, url: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
+    { icon: <FaTwitter className="inline" />, url: "https://twitter.com/yourusername", label: "Twitter" },
+    { icon: <FaDribbble className="inline" />, url: "https://dribbble.com/yourusername", label: "Dribbble" }
   ];
   
   const quickLinks = [
@@ -130,7 +130,7 @@ const Footer = () => {
             
             <div className="text-center">
               <p className="text-secondary text-sm flex items-center justify-center">
-                Crafted with <FaHeart className="text-accent mx-1" size={14} /> and modern tech
+                Crafted with <FaHeart className="text-accent mx-1 inline" size={14} /> and modern tech
               </p>
             </div>
           </div>
