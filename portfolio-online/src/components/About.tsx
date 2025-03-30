@@ -11,22 +11,22 @@ interface SkillCategory {
 const About = () => {
   const skillCategories: SkillCategory[] = [
     {
-      icon: <FaLaptopCode className="text-accent" size={24} />,
+      icon: <FaLaptopCode className="text-accent inline" size={24} />,
       title: "Frontend",
       skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"]
     },
     {
-      icon: <FaServer className="text-accent" size={24} />,
+      icon: <FaServer className="text-accent inline" size={24} />,
       title: "Backend",
       skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "GraphQL", "REST API"]
     },
     {
-      icon: <FaPaintBrush className="text-accent" size={24} />,
+      icon: <FaPaintBrush className="text-accent inline" size={24} />,
       title: "Design",
       skills: ["Figma", "Adobe XD", "UI/UX", "Responsive Design", "Wireframing"]
     },
     {
-      icon: <FaMobileAlt className="text-accent" size={24} />,
+      icon: <FaMobileAlt className="text-accent inline" size={24} />,
       title: "Other",
       skills: ["Git", "Docker", "CI/CD", "Testing", "Performance Optimization"]
     }
