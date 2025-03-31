@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme colors for light/dark mode */
+
+:root {
+  /* Light theme colors */
+  --light-primary: #f8fafc;
+  --light-secondary: #475569;
+  --light-tertiary: #e2e8f0;
+  --light-accent: #0ea5e9;
+  --light-accent-alt: #8b5cf6;
+  --light-text: #0f172a;
+  --light-muted: #64748b;
+  --light-glass: rgba(255, 255, 255, 0.8);
+  --light-gradient-start: #f1f5f9;
+  --light-gradient-end: #e0f2fe;
+}
+
+/* Dark theme (used by default) */
+html {
+  --primary-bg: var(--color-primary);
+  --secondary-color: var(--color-secondary);
+  --tertiary-bg: var(--color-tertiary);
+  --accent-color: var(--color-accent);
+  --accent-alt-color: var(--color-accent-alt);
+  --text-color: var(--color-white);
+  --muted-color: var(--color-secondary);
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --gradient-start-bg: var(--gradient-start);
+  --gradient-end-bg: var(--gradient-end);
+  --card-bg: rgba(15, 23, 42, 0.6);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Light theme applied when .light class is on html */
+html[data-theme="light"] {
+  --primary-bg: var(--light-primary);
+  --secondary-color: var(--light-secondary);
+  --tertiary-bg: var(--light-tertiary);
+  --accent-color: var(--light-accent);
+  --accent-alt-color: var(--light-accent-alt);
+  --text-color: var(--light-text);
+  --muted-color: var(--light-muted);
+  --glass-bg: var(--light-glass);
+  --gradient-start-bg: var(--light-gradient-start);
+  --gradient-end-bg: var(--light-gradient-end);
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(203, 213, 225, 0.5);
+}
+
+/* Apply theme variables to elements */
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.glass {
+  background: var(--glass-bg);
+  border-color: var(--border-color);
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Gradient text adaptation for light mode */
+html[data-theme="light"] .gradient-text {
+  background: linear-gradient(to right, var(--light-accent), var(--light-accent-alt));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(to bottom right, var(--gradient-start-bg), var(--gradient-end-bg));
+}
+
+/* Theme transition */
+.theme-transition {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+} 
