@@ -26,8 +26,8 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        'hero-pattern': "url('/noise.png'), radial-gradient(circle at top right, rgba(20, 30, 60, 0.5), transparent 50%)",
-        'grid-pattern': "url('/grid.png')",
+        'hero-pattern': "radial-gradient(circle at top right, rgba(20, 30, 60, 0.5), transparent 50%)",
+        'grid-pattern': "linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px)",
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
