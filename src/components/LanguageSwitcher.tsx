@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { FaGlobe } from 'react-icons/fa';
-import type { IconBaseProps } from 'react-icons';
 
 const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useLanguage();
