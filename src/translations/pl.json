@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Cześć, jestem",
+    "role": "Full Stack Developer",
+    "description": "Tworzę piękne i funkcjonalne aplikacje internetowe"
+  },
+  "about": {
+    "title": "O mnie",
+    "description": "Jestem pasjonatem programowania z doświadczeniem w nowoczesnych technologiach internetowych. Uwielbiam tworzyć eleganckie rozwiązania złożonych problemów."
+  },
+  "projects": {
+    "title": "Moje Projekty",
+    "viewProject": "Zobacz Projekt",
+    "viewCode": "Zobacz Kod"
+  },
+  "contact": {
+    "title": "Skontaktuj się",
+    "name": "Imię",
+    "email": "Email",
+    "message": "Wiadomość",
+    "send": "Wyślij Wiadomość"
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone"
+  }
+} 
