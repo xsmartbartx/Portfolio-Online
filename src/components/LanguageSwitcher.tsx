@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-import { FaGlobe as GlobeIcon } from 'react-icons/fa';
+import { FaGlobe } from 'react-icons/fa';
+import type { IconBaseProps } from 'react-icons';
 
 const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useLanguage();
@@ -17,7 +18,7 @@ const LanguageSwitcher: React.FC = () => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <GlobeIcon size={20} className="text-lg" />
+      <FaGlobe size={20} className="text-lg" />
       <span className="font-medium">{language.toUpperCase()}</span>
     </motion.button>
   );
