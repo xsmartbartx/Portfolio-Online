@@ -1,3 +1,39 @@
+@import "tailwindcss";
+
+/* Theme CSS styles */
+@layer base {
+  :root {
+    --color-primary: #3B82F6;
+    --color-secondary: #10B981;
+    --color-background: #ffffff;
+    --color-text: #1f2937;
+    --color-text-light: #6b7280;
+  }
+
+  .dark {
+    --color-background: #111827;
+    --color-text: #f3f4f6;
+    --color-text-light: #9ca3af;
+  }
+
+  body {
+    @apply bg-[var(--color-background)] text-[var(--color-text)];
+  }
+}
+
+/* Background patterns */
+.bg-grid {
+  background-image: url('%PUBLIC_URL%/patterns/grid.svg');
+  background-repeat: repeat;
+  background-size: 20px 20px;
+}
+
+.bg-noise {
+  background-image: url('%PUBLIC_URL%/patterns/noise.svg');
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
