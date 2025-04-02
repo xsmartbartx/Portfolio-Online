@@ -1,3 +1,47 @@
+@import "tailwindcss";
+
+/* Modern CSS styles */
+@layer base {
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-custom p-6;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+}
+
+/* Background patterns */
+.bg-grid {
+  background-image: url('%PUBLIC_URL%/patterns/grid.svg');
+  background-repeat: repeat;
+  background-size: 20px 20px;
+}
+
+.bg-noise {
+  background-image: url('%PUBLIC_URL%/patterns/noise.svg');
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
