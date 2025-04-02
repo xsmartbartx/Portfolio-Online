@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Full Stack Developer",
+    "description": "I create beautiful and functional web applications"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a passionate developer with expertise in modern web technologies. I love creating elegant solutions to complex problems."
+  },
+  "projects": {
+    "title": "My Projects",
+    "viewProject": "View Project",
+    "viewCode": "View Code"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+} 
