@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Modern CSS styles */
 @layer base {
@@ -41,10 +43,6 @@
   background-repeat: repeat;
   background-size: 200px 200px;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* ==================== MODERN PORTFOLIO DESIGN SYSTEM ==================== */
 
