@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import Icon from './Icon';
+import { useLanguage } from '../context/LanguageContext';
 
 interface FormData {
   name: string;
@@ -10,7 +11,8 @@ interface FormData {
   message: string;
 }
 
-const Contact = () => {
+const Contact: React.FC = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -75,13 +77,13 @@ const Contact = () => {
           className="text-center mb-20"
         >
           <span className="inline-block px-4 py-1.5 mb-4 rounded-full text-sm text-accent bg-tertiary bg-opacity-30 border border-accent border-opacity-20">
-            Contact Me
+            {t('contact.title')}
           </span>
           <h2 className="section-heading mb-6">
-            Let's <span className="gradient-text">Connect</span>
+            {t('contact.subtitle')}
           </h2>
           <p className="section-subheading max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? I'm just a message away.
+            {t('contact.description')}
           </p>
         </motion.div>
 
@@ -172,7 +174,7 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-white-100 mb-2 text-sm">
-                    Your Name <span className="text-accent">*</span>
+                    {t('contact.name')} <span className="text-accent">*</span>
                   </label>
                   <input
                     type="text"
@@ -188,7 +190,7 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-white-100 mb-2 text-sm">
-                    Your Email <span className="text-accent">*</span>
+                    {t('contact.email')} <span className="text-accent">*</span>
                   </label>
                   <input
                     type="email"
@@ -205,7 +207,7 @@ const Contact = () => {
               
               <div className="mb-8">
                 <label htmlFor="message" className="block text-white-100 mb-2 text-sm">
-                  Your Message <span className="text-accent">*</span>
+                  {t('contact.message')} <span className="text-accent">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -227,10 +229,10 @@ const Contact = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 {loading ? (
-                  <span>Sending...</span>
+                  <span>{t('contact.sending')}</span>
                 ) : (
                   <>
-                    <span>Send Message</span>
+                    <span>{t('contact.send')}</span>
                     <Icon icon={FaPaperPlane} size={14} />
                   </>
                 )}
@@ -242,7 +244,7 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="mt-4 text-green-400 text-sm bg-green-400/10 p-3 rounded border border-green-400/20"
                 >
-                  Your message has been sent successfully! I'll get back to you soon.
+                  {t('contact.success')}
                 </motion.p>
               )}
               
