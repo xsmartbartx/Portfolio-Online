@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
     {
       name: 'GitHub',
       icon: FaGithub,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/xsmartbartx',
       color: theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
     },
     {
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
               className="text-2xl font-bold gradient-text"
             >
-              Your Name
+              MiejskiSurfer
             </motion.h2>
             <p className="text-secondary">
               Full-Stack Developer <span className="inline-block mx-2 w-1 h-1 rounded-full bg-accent"></span> UI/UX Designer
@@ -145,7 +145,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <p className="text-secondary text-sm">
-                &copy; {currentYear} <span className="text-accent">Your Name</span>. All Rights Reserved.
+                &copy; {currentYear} <span className="text-accent">MiejskiSurfer</span>. All Rights Reserved.
               </p>
             </div>
             
@@ -160,7 +160,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-white-100/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-secondary text-sm">
-              © {new Date().getFullYear()} Your Name. All rights reserved.
+              © {new Date().getFullYear()} MiejskiSurfer. All rights reserved.
             </p>
             <p className="text-secondary text-sm flex items-center">
               <span>Currently using {theme === 'dark' ? 'dark' : 'light'} theme</span>
