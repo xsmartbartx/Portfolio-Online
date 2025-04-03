@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
       description: "A modern, responsive portfolio website showcasing my projects and skills. Features smooth animations and a clean design optimized for all devices.",
       image: "https://via.placeholder.com/800x450?text=Portfolio+Website",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
-      githubLink: "https://github.com/yourusername/portfolio",
+      githubLink: "https://github.com/xsmartbartx/Portfolio-Online",
       demoLink: "https://yourdomain.com"
     },
     {
@@ -265,7 +265,7 @@ const Projects: React.FC = () => {
         {/* More projects button */}
         <div className="flex justify-center mt-16">
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/xsmartbartx" 
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-primary flex items-center gap-2 justify-center mx-auto px-8 py-4 mt-16"
