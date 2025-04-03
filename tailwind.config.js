@@ -8,20 +8,20 @@ module.exports = {
     extend: {
       colors: {
         primary: '#3B82F6',
-        secondary: '#10B981',
+        secondary: '#4a5568',
         tertiary: "#1e293b",
-        accent: "#38bdf8",
-        "accent-alt": "#a78bfa",
+        accent: "#3b82f6",
+        "accent-alt": "#8b5cf6",
         "black-100": "#111827",
         "black-200": "#030712",
         "white-100": "#f8fafc",
-        "gradient-start": "#0f172a",
-        "gradient-end": "#0c0a2a",
+        "gradient-start": "#3b82f6",
+        "gradient-end": "#8b5cf6",
       },
       boxShadow: {
         card: "0px 20px 50px -15px rgba(2, 12, 27, 0.7)",
-        glow: "0 0 15px 3px rgba(56, 189, 248, 0.2)",
-        "glow-purple": "0 0 15px 3px rgba(167, 139, 250, 0.2)",
+        glow: "0 0 15px 3px rgba(59, 130, 246, 0.2)",
+        "glow-purple": "0 0 15px 3px rgba(139, 92, 246, 0.2)",
         'custom': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       },
       screens: {
@@ -42,8 +42,8 @@ module.exports = {
           '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 15px 3px rgba(56, 189, 248, 0.2)' },
-          '50%': { boxShadow: '0 0 25px 5px rgba(56, 189, 248, 0.4)' },
+          '0%, 100%': { boxShadow: '0 0 15px 3px rgba(59, 130, 246, 0.2)' },
+          '50%': { boxShadow: '0 0 25px 5px rgba(59, 130, 246, 0.4)' },
         },
         fadeIn: {
           '0%': { opacity: '0' },
