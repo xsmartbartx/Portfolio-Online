@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLaptopCode, FaServer, FaPaintBrush, FaMobileAlt } from 'react-icons/fa';
 import { IconType } from 'react-icons';
