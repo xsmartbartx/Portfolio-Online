@@ -3,9 +3,12 @@ import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
 import Icon from './Icon';
+import { useLanguage } from '../context/LanguageContext';
 
-const Hero = () => {
+const Hero: React.FC = () => {
+  const { t } = useLanguage();
   const heroRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
   
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -28,6 +31,25 @@ const Hero = () => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  useEffect(() => {
+    const title = titleRef.current;
+    if (!title) return;
+
+    const text = title.textContent || '';
+    title.textContent = '';
+    let i = 0;
+
+    const typeWriter = () => {
+      if (i < text.length) {
+        title.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    };
+
+    typeWriter();
+  }, [t('hero.name')]);
 
   return (
     <section id="home" ref={heroRef} className="section overflow-hidden flex flex-col justify-center items-center pt-28 md:pt-32 theme-transition">
@@ -53,40 +75,47 @@ const Hero = () => {
             <span className="text-accent">Available</span> for freelance projects
           </motion.div>
           
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-          >
-            <span className="text-white-100">Hello, I'm </span>
-            <span className="gradient-text text-glow">Your Name</span>
-          </motion.h1>
-          
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-xl md:text-2xl font-medium mb-8"
+            transition={{ duration: 0.5 }}
+            className="text-2xl md:text-3xl text-accent mb-4"
           >
-            <span className="text-white-100 opacity-90">Full-Stack Developer</span>
-            <span className="inline-block mx-2 w-1.5 h-1.5 rounded-full bg-accent"></span>
-            <span className="text-white-100 opacity-90">UI/UX Designer</span>
+            {t('hero.greeting')}
           </motion.h2>
+          
+          <motion.h1
+            ref={titleRef}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold mb-4"
+          >
+            {t('hero.name')}
+          </motion.h1>
+          
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-xl md:text-2xl text-secondary mb-8"
+          >
+            {t('hero.role')}
+          </motion.h3>
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-secondary max-w-lg mx-auto md:mx-0 mb-10"
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="text-lg md:text-xl text-white-100 mb-12 max-w-2xl mx-auto"
           >
-            I craft <span className="text-white-100">exceptional digital experiences</span> through elegant code and thoughtful design. Specializing in creating responsive, intuitive interfaces backed by robust, scalable architecture.
+            {t('hero.description')}
           </motion.p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
             className="flex gap-4 mb-8 justify-center md:justify-start"
           >
             <a 
@@ -112,12 +141,18 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
             className="flex flex-wrap gap-4 justify-center md:justify-start"
           >
-            <a href="#projects" className="btn-primary px-8 py-4">
-              Explore My Work
-            </a>
+            <motion.a
+              href="#projects"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="btn-primary px-8 py-4"
+            >
+              {t('hero.cta')}
+            </motion.a>
             <a href="#contact" className="btn-secondary px-8 py-4">
               Let's Connect
             </a>
