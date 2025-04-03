@@ -469,13 +469,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Base styles */
 :root {
   --primary: #ffffff;
-  --secondary: #4a5568;
+  --secondary: #64748b;
   --accent: #3b82f6;
   --accent-alt: #8b5cf6;
-  --text-primary: #1a202c;
-  --text-secondary: #4a5568;
-  --background: #ffffff;
-  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --background: #f8fafc;
+  --card-bg: rgba(255, 255, 255, 0.9);
   --border-color: rgba(0, 0, 0, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --gradient-start: #3b82f6;
