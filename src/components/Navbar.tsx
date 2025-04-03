@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Icon from './Icon';
 import LanguageSwitcher from './LanguageSwitcher';
+import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,10 +31,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { id: 'home', title: 'Home' },
-    { id: 'about', title: 'About' },
-    { id: 'projects', title: 'Projects' },
-    { id: 'contact', title: 'Contact' },
+    { id: 'home', title: t('nav.home') },
+    { id: 'about', title: t('nav.about') },
+    { id: 'projects', title: t('nav.projects') },
+    { id: 'contact', title: t('nav.contact') },
   ];
 
   return (
@@ -93,7 +95,7 @@ const Navbar = () => {
               href="#contact"
               className="btn-primary"
             >
-              Get in Touch
+              {t('nav.getInTouch')}
             </a>
           </motion.li>
         </motion.ul>
@@ -165,7 +167,7 @@ const Navbar = () => {
                     className="btn-primary w-full text-center block"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Get in Touch
+                    {t('nav.getInTouch')}
                   </a>
                 </div>
               </div>
