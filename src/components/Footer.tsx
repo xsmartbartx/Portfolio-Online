@@ -4,14 +4,29 @@ import { FaHeart, FaGithub, FaLinkedin, FaTwitter, FaDribbble, FaEnvelope } from
 import { useTheme } from '../hooks/useTheme';
 import Icon from './Icon';
 
-const Footer = () => {
-  const { isDark } = useTheme();
+const Footer: React.FC = () => {
+  const { theme } = useTheme();
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: FaGithub, url: "https://github.com/yourusername", label: "GitHub" },
-    { icon: FaLinkedin, url: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-    { icon: FaTwitter, url: "https://twitter.com/yourusername", label: "Twitter" },
+    {
+      name: 'GitHub',
+      icon: FaGithub,
+      url: 'https://github.com/yourusername',
+      color: theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+    },
+    {
+      name: 'LinkedIn',
+      icon: FaLinkedin,
+      url: 'https://linkedin.com/in/yourusername',
+      color: theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+    },
+    {
+      name: 'Twitter',
+      icon: FaTwitter,
+      url: 'https://twitter.com/yourusername',
+      color: theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+    },
     { icon: FaDribbble, url: "https://dribbble.com/yourusername", label: "Dribbble" },
     { icon: FaEnvelope, url: "mailto:your.email@example.com", label: "Email" }
   ];
@@ -60,10 +75,11 @@ const Footer = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-secondary hover:text-accent transition-colors duration-300"
-                  aria-label={link.label}
+                  className={link.color}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <Icon icon={link.icon} />
+                  <Icon icon={link.icon} size={20} />
                 </motion.a>
               ))}
             </div>
@@ -147,8 +163,8 @@ const Footer = () => {
               © {new Date().getFullYear()} Your Name. All rights reserved.
             </p>
             <p className="text-secondary text-sm flex items-center">
-              <span>Currently using {isDark ? 'dark' : 'light'} theme</span>
-              <span className={`ml-2 w-2 h-2 rounded-full ${isDark ? 'bg-white-100' : 'bg-tertiary'}`}></span>
+              <span>Currently using {theme === 'dark' ? 'dark' : 'light'} theme</span>
+              <span className={`ml-2 w-2 h-2 rounded-full ${theme === 'dark' ? 'bg-white-100' : 'bg-tertiary'}`}></span>
             </p>
           </div>
         </div>
