@@ -5,8 +5,8 @@
 /* Theme CSS styles */
 @layer base {
   :root {
-    --color-primary: #3B82F6;
-    --color-secondary: #10B981;
+    --color-primary: #000147;
+    --color-secondary: #2687c0;
     --color-background: #ffffff;
     --color-text: #1f2937;
     --color-text-light: #6b7280;
@@ -43,7 +43,7 @@
   --light-primary: #f8fafc;
   --light-secondary: #475569;
   --light-tertiary: #e2e8f0;
-  --light-accent: #0ea5e9;
+  --light-accent: #000147;
   --light-accent-alt: #8b5cf6;
   --light-text: #0f172a;
   --light-muted: #64748b;
