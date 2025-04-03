@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Icon from './Icon';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,6 +82,13 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
           >
+            <LanguageSwitcher />
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: (navLinks.length + 1) * 0.1 }}
+          >
             <a
               href="#contact"
               className="btn-primary"
@@ -143,6 +151,13 @@ const Navbar = () => {
                       </a>
                     </motion.li>
                   ))}
+                  <motion.li
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
+                  >
+                    <LanguageSwitcher />
+                  </motion.li>
                 </ul>
                 <div className="mt-auto">
                   <a 
