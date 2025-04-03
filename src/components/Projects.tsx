@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaArrowRight } from 'react-icons/fa';
 import Icon from './Icon';
+import { useLanguage } from '../context/LanguageContext';
 
 interface Project {
   id: number;
@@ -14,7 +15,8 @@ interface Project {
   featured?: boolean;
 }
 
-const Projects = () => {
+const Projects: React.FC = () => {
+  const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState<string>('all');
   
   const projects: Project[] = [
@@ -79,13 +81,13 @@ const Projects = () => {
           className="text-center mb-20"
         >
           <span className="inline-block px-4 py-1.5 mb-4 rounded-full text-sm text-accent bg-tertiary bg-opacity-30 border border-accent border-opacity-20">
-            My Work
+            {t('projects.title')}
           </span>
           <h2 className="section-heading mb-6">
-            Featured <span className="gradient-text">Projects</span>
+            Featured <span className="gradient-text">{t('projects.featuredProjects')}</span>
           </h2>
           <p className="section-subheading max-w-2xl mx-auto">
-            A curated selection of my recent work, showcasing my skills and passion for creating exceptional digital experiences.
+            {t('projects.description')}
           </p>
         </motion.div>
         
@@ -252,7 +254,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="text-secondary hover:text-accent transition-colors flex items-center gap-1 text-sm"
                     >
-                      View details <Icon icon={FaArrowRight} size={12} />
+                      {t('projects.viewProject')} <Icon icon={FaArrowRight} size={12} />
                     </a>
                   </div>
                 </div>
@@ -268,7 +270,7 @@ const Projects = () => {
             rel="noopener noreferrer"
             className="btn-primary flex items-center gap-2 justify-center mx-auto px-8 py-4 mt-16"
           >
-            <span>View All Projects</span>
+            <span>{t('projects.viewAllProjects')}</span>
             <Icon icon={FaGithub} size={18} />
           </a>
         </div>
