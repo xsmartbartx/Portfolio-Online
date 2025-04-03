@@ -57,8 +57,8 @@
   --color-primary: #0a0d16;
   --color-secondary: #94a3b8;
   --color-tertiary: #1e293b;
-  --color-accent: #38bdf8;
-  --color-accent-alt: #a78bfa;
+  --color-accent: #3b82f6;
+  --color-accent-alt: #8b5cf6;
   --color-white: #f8fafc;
   --color-black: #030712;
   
@@ -71,9 +71,9 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-card: 0px 20px 50px -15px rgba(2, 12, 27, 0.7);
-  --shadow-glow: 0 0 15px 3px rgba(56, 189, 248, 0.2);
-  --shadow-glow-strong: 0 0 25px 5px rgba(56, 189, 248, 0.4);
-  --shadow-glow-purple: 0 0 15px 3px rgba(167, 139, 250, 0.2);
+  --shadow-glow: 0 0 15px 3px rgba(59, 130, 246, 0.2);
+  --shadow-glow-strong: 0 0 25px 5px rgba(59, 130, 246, 0.4);
+  --shadow-glow-purple: 0 0 15px 3px rgba(139, 92, 246, 0.2);
   
   /* Spacing */
   --space-1: 0.25rem;
@@ -181,10 +181,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes text-glow {
   0%, 100% {
-    text-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
   }
   50% {
-    text-shadow: 0 0 20px rgba(56, 189, 248, 0.4), 0 0 30px rgba(56, 189, 248, 0.2);
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 30px rgba(59, 130, 246, 0.2);
   }
 }
 
@@ -320,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
 .input-modern:focus {
   outline: none;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 /* Dividers */
@@ -382,7 +382,7 @@ h1, h2, h3, h4, h5, h6 {
 .gradient-bg-text {
   position: relative;
   display: inline-block;
-  background: linear-gradient(to right, rgba(56, 189, 248, 0.1), rgba(167, 139, 250, 0.1));
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
   padding: 0.25rem 1rem;
   border-radius: var(--radius-full);
   font-weight: 500;
@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tag:hover {
-  background-color: rgba(56, 189, 248, 0.1);
+  background-color: rgba(59, 130, 246, 0.1);
   color: var(--color-accent);
 }
 
@@ -436,7 +436,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-icon:hover {
-  background-color: rgba(56, 189, 248, 0.1);
+  background-color: rgba(59, 130, 246, 0.1);
   color: var(--color-accent);
   transform: translateY(-3px);
 }
