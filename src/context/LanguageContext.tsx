@@ -1,9 +1,7 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import enTranslations from '../translations/en.json';
-import plTranslations from '../translations/pl.json';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { translations } from '../translations';
 
 type Language = 'en' | 'pl';
-type Translations = typeof enTranslations;
 
 interface LanguageContextType {
   language: Language;
@@ -13,21 +11,8 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>(() => {
-    const savedLang = localStorage.getItem('language');
-    return (savedLang as Language) || 'en';
-  });
-
-  const translations: Record<Language, Translations> = {
-    en: enTranslations,
-    pl: plTranslations,
-  };
-
-  useEffect(() => {
-    localStorage.setItem('language', language);
-    document.documentElement.lang = language;
-  }, [language]);
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState<Language>('en');
 
   const t = (key: string): string => {
     const keys = key.split('.');
