@@ -2,9 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { FaGlobe } from 'react-icons/fa';
+import type { IconType } from 'react-icons';
 
 const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useLanguage();
+  const GlobeIcon: IconType = FaGlobe;
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'pl' : 'en');
@@ -17,7 +19,7 @@ const LanguageSwitcher: React.FC = () => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <FaGlobe size={20} className="text-lg" aria-hidden="true" />
+      <GlobeIcon size={20} className="text-lg" aria-hidden="true" />
       <span className="font-medium">{language.toUpperCase()}</span>
     </motion.button>
   );
