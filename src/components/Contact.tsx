@@ -41,9 +41,9 @@ const Contact: React.FC = () => {
         'YOUR_TEMPLATE_ID',
         {
           from_name: formData.name,
-          to_name: 'Your Name',
+          to_name: 'MiejskiSurfer',
           from_email: formData.email,
-          to_email: 'your.email@example.com',
+          to_email: 'bw141105@gmail.com',
           message: formData.message,
         },
         'YOUR_PUBLIC_KEY'
@@ -128,7 +128,7 @@ const Contact: React.FC = () => {
                   <h4 className="text-lg font-medium mb-4">Connect with Me</h4>
                   <div className="flex gap-4">
                     <a 
-                      href="https://github.com/yourusername" 
+                      href="https://github.com/xsmartbartx" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center text-secondary hover:text-accent hover:bg-tertiary/50 transition-all duration-300"
