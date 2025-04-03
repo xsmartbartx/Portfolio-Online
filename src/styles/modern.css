@@ -63,8 +63,8 @@
   --color-black: #030712;
   
   /* Gradient Colors */
-  --gradient-start: #0f172a;
-  --gradient-end: #0c0a2a;
+  --gradient-start: #3b82f6;
+  --gradient-end: #8b5cf6;
   
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -478,6 +478,8 @@ h1, h2, h3, h4, h5, h6 {
   --card-bg: rgba(255, 255, 255, 0.8);
   --border-color: rgba(0, 0, 0, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --gradient-start: #3b82f6;
+  --gradient-end: #8b5cf6;
 }
 
 [data-theme="dark"] {
@@ -491,6 +493,8 @@ h1, h2, h3, h4, h5, h6 {
   --card-bg: rgba(15, 23, 42, 0.8);
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.3);
+  --gradient-start: #60a5fa;
+  --gradient-end: #a78bfa;
 }
 
 body {
@@ -521,9 +525,17 @@ p {
   margin-bottom: 1rem;
 }
 
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Buttons */
 .btn-primary {
-  background-color: var(--accent);
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -535,12 +547,12 @@ p {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-alt);
   transform: translateY(-1px);
-  box-shadow: 0 4px 6px var(--shadow-color);
+  box-shadow: 0 6px 8px var(--shadow-color);
 }
 
 .btn-secondary {
@@ -559,7 +571,7 @@ p {
 }
 
 .btn-secondary:hover {
-  background-color: var(--accent);
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   color: white;
   transform: translateY(-1px);
   box-shadow: 0 4px 6px var(--shadow-color);
@@ -600,7 +612,7 @@ p {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--accent);
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   transition: width 0.3s ease;
 }
 
