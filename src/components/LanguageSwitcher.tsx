@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { FaGlobe } from 'react-icons/fa';
+import Icon from './Icon';
 
 const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useLanguage();
@@ -36,7 +37,7 @@ const LanguageSwitcher: React.FC = () => {
       whileTap={{ scale: 0.95 }}
       title={language === 'en' ? 'Switch to Polish' : 'Przełącz na angielski'}
     >
-      <FaGlobe size={20} className="text-lg" aria-hidden="true" />
+      <Icon icon={FaGlobe} size={20} className="text-lg" aria-hidden="true" />
       <span className="font-medium">{language.toUpperCase()}</span>
     </motion.button>
   );
