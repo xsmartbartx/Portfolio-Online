@@ -9,7 +9,7 @@ export const translations = {
     },
     hero: {
       greeting: 'Hi, I\'m',
-      name: 'Your Name',
+      name: 'MiejskiSurfer',
       role: 'Full Stack Developer',
       description: 'I create beautiful and functional web applications',
       cta: 'View My Work'
@@ -47,7 +47,7 @@ export const translations = {
     },
     hero: {
       greeting: 'Cześć, jestem',
-      name: 'Twoje Imię',
+      name: 'MiejskiSurfer',
       role: 'Full Stack Developer',
       description: 'Tworzę piękne i funkcjonalne aplikacje internetowe',
       cta: 'Zobacz moje prace'
