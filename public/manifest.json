@@ -3,9 +3,8 @@
   "name": "My Portfolio | Developer & Designer",
   "icons": [
     {
-      "src": "favicon/favicon.svg",
-      "type": "image/svg+xml",
-      "sizes": "any"
+      "src": "favicon.ico",
+      "type": "image/x-icon"
     },
     {
       "src": "favicon/favicon-16x16.png",
