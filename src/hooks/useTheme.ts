@@ -1,40 +1,22 @@
 import { useState, useEffect } from 'react';
-import { themeToggle } from '../utils/themeToggle';
 
 type Theme = 'light' | 'dark';
 
-export function useTheme() {
-  const [theme, setTheme] = useState<Theme>(themeToggle.getTheme());
-  
+export const useTheme = () => {
+  const [theme, setTheme] = useState<Theme>(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return (savedTheme as Theme) || 'light';
+  });
+
   useEffect(() => {
-    // Initialize theme on component mount
-    themeToggle.initTheme();
-    setTheme(themeToggle.getTheme());
-    
-    // Create a function to handle theme changes
-    const handleThemeChange = () => {
-      setTheme(themeToggle.getTheme());
-    };
-    
-    // Add event listener for custom theme change events
-    window.addEventListener('themeChange', handleThemeChange);
-    
-    return () => {
-      window.removeEventListener('themeChange', handleThemeChange);
-    };
-  }, []);
-  
+    const root = window.document.documentElement;
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   const toggleTheme = () => {
-    themeToggle.toggleTheme();
-    setTheme(themeToggle.getTheme());
-    // Dispatch a custom event so other components can react to theme changes
-    window.dispatchEvent(new Event('themeChange'));
+    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
   };
-  
-  return {
-    theme,
-    toggleTheme,
-    isDark: theme === 'dark',
-    isLight: theme === 'light'
-  };
-} 
+
+  return { theme, toggleTheme };
+}; 
