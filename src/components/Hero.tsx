@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
             className="flex gap-4 mb-8 justify-center md:justify-start"
           >
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/xsmartbartx" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-12 h-12 flex items-center justify-center rounded-full border border-white-100 border-opacity-20 text-white-100 hover:text-accent hover:border-accent transition-all duration-300 theme-transition"
