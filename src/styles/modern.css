@@ -472,8 +472,8 @@ h1, h2, h3, h4, h5, h6 {
   --secondary: #64748b;
   --accent: #3b82f6;
   --accent-alt: #8b5cf6;
-  --text-primary: #ffffff;
-  --text-secondary: #475569;
+  --text-primary: #000000;
+  --text-secondary: #323d4d;
   --background: #f8fafc;
   --card-bg: rgba(255, 255, 255, 0.9);
   --border-color: rgba(0, 0, 0, 0.1);
