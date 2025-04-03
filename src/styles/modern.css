@@ -33,15 +33,20 @@
 
 /* Background patterns */
 .bg-grid {
-  background-image: url('/patterns/grid.svg');
-  background-repeat: repeat;
+  background-image: 
+    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
   background-size: 20px 20px;
+  background-repeat: repeat;
 }
 
 .bg-noise {
-  background-image: url('/patterns/noise.svg');
-  background-repeat: repeat;
+  background-image: 
+    repeating-conic-gradient(#111 0%, transparent 0.00003%, transparent 0.0005%, #111 0.001%),
+    repeating-conic-gradient(#111 0%, transparent 0.00005%, transparent 0.0007%, #111 0.001%);
   background-size: 200px 200px;
+  background-repeat: repeat;
+  opacity: 0.05;
 }
 
 /* ==================== MODERN PORTFOLIO DESIGN SYSTEM ==================== */
