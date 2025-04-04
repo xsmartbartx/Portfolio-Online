@@ -5,15 +5,15 @@
 /* Theme CSS styles */
 @layer base {
   :root {
-    --color-primary: #000147;
-    --color-secondary: #2687c0;
+    --color-primary: hsl(189, 100%, 77%);
+    --color-secondary: #01116b;
     --color-background: #ffffff;
     --color-text: #1f2937;
     --color-text-light: #6b7280;
   }
 
   .dark {
-    --color-background: #111827;
+    --color-background: #0b0974;
     --color-text: #f3f4f6;
     --color-text-light: #9ca3af;
   }
@@ -41,15 +41,15 @@
 :root {
   /* Light theme colors */
   --light-primary: #f8fafc;
-  --light-secondary: #475569;
-  --light-tertiary: #e2e8f0;
+  --light-secondary: #a2adbb;
+  --light-tertiary: #b1b8c2;
   --light-accent: #000147;
   --light-accent-alt: #8b5cf6;
   --light-text: #0f172a;
-  --light-muted: #64748b;
+  --light-muted: #a7a7a7;
   --light-glass: rgba(255, 255, 255, 0.8);
   --light-gradient-start: #f1f5f9;
-  --light-gradient-end: #e0f2fe;
+  --light-gradient-end: #d8e2e9;
 }
 
 /* Dark theme (used by default) */
