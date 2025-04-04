@@ -469,7 +469,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Base styles */
 :root {
   --primary: #ffffff;
-  --secondary: #64748b;
+  --secondary: #dadada;
   --accent: #3b82f6;
   --accent-alt: #8b5cf6;
   --text-primary: #000000;
@@ -485,16 +485,16 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="dark"] {
   --primary: #0f172a;
   --secondary: #94a3b8;
-  --accent: #60a5fa;
-  --accent-alt: #a78bfa;
+  --accent: #050050;
+  --accent-alt: #000a61;
   --text-primary: #d6d6d6c2;
   --text-secondary: #94a3b8;
   --background: #0f172a;
   --card-bg: rgba(15, 23, 42, 0.8);
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.3);
-  --gradient-start: #60a5fa;
-  --gradient-end: #a78bfa;
+  --gradient-start: #0e036e;
+  --gradient-end: #2a2da8;
 }
 
 body {
