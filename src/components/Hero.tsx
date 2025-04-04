@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="text-lg md:text-xl text-white-100 mb-12 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-grey-100 mb-12 max-w-2xl mx-auto"
           >
             {t('hero.description')}
           </motion.p>
